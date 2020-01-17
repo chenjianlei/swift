@@ -12,6 +12,12 @@ class ComponentNumberRecordView: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
+        backgroundColor = .color_353331
+        contentView.layer.cornerRadius = 16.0
+        contentView.layer.masksToBounds = true
+        makeInitSubviews()
+        makeInitLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -19,11 +25,26 @@ class ComponentNumberRecordView: UITableViewCell {
     }
     
     private func makeInitSubviews() {
-        
+        contentView.addSubview(recordKaView)
+        contentView.addSubview(recordBuView)
     }
     
     private func makeInitLayout() {
+        contentView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().offset(-15)
+            make.height.equalToSuperview()
+        }
         
+        recordKaView.snp.makeConstraints { (make) in
+            make.width.equalToSuperview().multipliedBy(0.5)
+            make.height.left.equalToSuperview()
+        }
+        
+        recordBuView.snp.makeConstraints { (make) in
+            make.width.equalToSuperview().multipliedBy(0.5)
+            make.height.right.equalToSuperview()
+        }
     }
     
     lazy var recordKaView: SPFriendRecordingView = {

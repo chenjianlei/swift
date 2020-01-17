@@ -18,8 +18,13 @@ class FriendComponentsFactory {
     
     private func makeInitSubviews() {
         let sectionOne = SPFriendSectionOne()
+        
         let sectionOneRowOne = SPFriendCycleCellComponent()
-        sectionOne.addComponents([sectionOneRowOne])
+        let sectionOneMargin = ComponentsMarginComponse.init(height: 15, bg: UIColor.color_353331)
+        let sectionOneRowTwo = SPFriendRecordCellComponent()
+        let sectionOneRowThree = SPFriendStaisticsCellComponent()
+        sectionOne.addComponents([sectionOneRowOne, sectionOneMargin, sectionOneRowTwo, sectionOneMargin, sectionOneRowThree, sectionOneMargin])
         sections.append(sectionOne)
+        
     }
 }
