@@ -11,7 +11,7 @@ import HGCircularSlider
 import RxSwift
 import Charts
 
-class SPFriendViewController: UIViewController {
+class SPFriendViewController: UITableViewController {
 
     let disposeBag = DisposeBag()
     
@@ -19,8 +19,24 @@ class SPFriendViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .color_353331
         navigationItem.title = "圈子"
-        makeInitSubviews()
-        makeInitLayout()
+        makeInitConfig()
+//        makeInitSubviews()
+//        makeInitLayout()
+    }
+    
+    lazy var tableViewComponent: M80TableViewComponent = {
+        self.tableView.separatorStyle = .none
+        self.tableView.backgroundColor = .color_353331
+        let t = M80TableViewComponent.init(tableView: self.tableView)
+        let context = M80TableViewComponentContext()
+        context.viewController = self
+        t.context = context
+        return t
+    }()
+    
+    private func makeInitConfig() {
+        let factory = FriendComponentsFactory()
+        tableViewComponent.sections = factory.sections
     }
     
     lazy var slider: CircularSlider = {
@@ -51,7 +67,6 @@ class SPFriendViewController: UIViewController {
         let chart = BarChartView()
         chart.delegate = self
         chart.backgroundColor = .color_35373B
-//        chart.backgroundColor = .white
         chart.noDataText = "not data ~"
         chart.scaleXEnabled = false
         chart.scaleYEnabled = false
@@ -101,7 +116,21 @@ class SPFriendViewController: UIViewController {
         view.addSubview(slider)
         slider.addSubview(iconImageView)
         view.addSubview(chartView)
+        view.addSubview(recordKaView)
+        view.addSubview(recordBuView)
     }
+    
+    lazy var recordKaView: SPFriendRecordingView = {
+        let rec = SPFriendRecordingView.init(des: "卡路里", icon: "")
+        rec.backgroundColor = .color_35373B
+        return rec
+    }()
+    
+    lazy var recordBuView: SPFriendRecordingView = {
+        let rec = SPFriendRecordingView.init(des: "步数", icon: "")
+        rec.backgroundColor = .color_35373B
+        return rec
+    }()
     
     private func makeInitLayout() {
         slider.snp.makeConstraints { (make) in
@@ -124,6 +153,20 @@ class SPFriendViewController: UIViewController {
             let rote = CGFloat((375 - 30) / 140)
             let height = CGFloat((global_screen_width - 30) / rote)
             make.height.equalTo(height)
+        }
+        
+        recordKaView.snp.makeConstraints { (make) in
+            make.width.equalToSuperview().multipliedBy(0.5).offset(-15)
+            make.height.equalTo(75)
+            make.left.equalTo(15)
+            make.bottom.equalTo(chartView.snp.top).offset(-20)
+        }
+        
+        recordBuView.snp.makeConstraints { (make) in
+            make.width.equalToSuperview().multipliedBy(0.5).offset(-15)
+            make.height.equalTo(75)
+            make.right.equalTo(-15)
+            make.bottom.equalTo(recordKaView)
         }
     }
     

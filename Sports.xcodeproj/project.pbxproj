@@ -41,6 +41,13 @@
 		A598566423CC446E00DEF8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A598566323CC446E00DEF8A7 /* Assets.xcassets */; };
 		A598566723CC446E00DEF8A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A598566523CC446E00DEF8A7 /* LaunchScreen.storyboard */; };
 		A598567023CC450200DEF8A7 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598566F23CC450200DEF8A7 /* ColorManager.swift */; };
+		A5E24D8323D1A84500BD5641 /* SPFriendRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E24D8223D1A84500BD5641 /* SPFriendRecordingView.swift */; };
+		A5E24D8623D1B1D100BD5641 /* FriendComponentsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E24D8523D1B1D100BD5641 /* FriendComponentsFactory.swift */; };
+		A5E24D8A23D1B24000BD5641 /* SPFriendSectionOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E24D8923D1B24000BD5641 /* SPFriendSectionOne.swift */; };
+		A5E24D8C23D1B29800BD5641 /* SPFriendCycleCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E24D8B23D1B29800BD5641 /* SPFriendCycleCellComponent.swift */; };
+		A5E24D8E23D1B2ED00BD5641 /* ComponentCycleRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E24D8D23D1B2ED00BD5641 /* ComponentCycleRecordView.swift */; };
+		A5E24D9023D1BA3200BD5641 /* SPFriendRecordCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E24D8F23D1BA3200BD5641 /* SPFriendRecordCellComponent.swift */; };
+		A5E24D9223D1BA8400BD5641 /* ComponentNumberRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E24D9123D1BA8400BD5641 /* ComponentNumberRecordView.swift */; };
 		E8A4FFF7CD7699B202BED0A5 /* Pods_Sports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ED55E43B2329E69218591C /* Pods_Sports.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +92,13 @@
 		A598566623CC446E00DEF8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A598566823CC446E00DEF8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A598566F23CC450200DEF8A7 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		A5E24D8223D1A84500BD5641 /* SPFriendRecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFriendRecordingView.swift; sourceTree = "<group>"; };
+		A5E24D8523D1B1D100BD5641 /* FriendComponentsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendComponentsFactory.swift; sourceTree = "<group>"; };
+		A5E24D8923D1B24000BD5641 /* SPFriendSectionOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFriendSectionOne.swift; sourceTree = "<group>"; };
+		A5E24D8B23D1B29800BD5641 /* SPFriendCycleCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFriendCycleCellComponent.swift; sourceTree = "<group>"; };
+		A5E24D8D23D1B2ED00BD5641 /* ComponentCycleRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentCycleRecordView.swift; sourceTree = "<group>"; };
+		A5E24D8F23D1BA3200BD5641 /* SPFriendRecordCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFriendRecordCellComponent.swift; sourceTree = "<group>"; };
+		A5E24D9123D1BA8400BD5641 /* ComponentNumberRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentNumberRecordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +293,8 @@
 				A583AA9523CC95CE00073379 /* ComponsentLandscapeCollectionView.swift */,
 				A583AAA423CCA23B00073379 /* ComponsentMarginView.swift */,
 				A59351D623CD604E0075E8E1 /* ComponsentShowImageListTableView.swift */,
+				A5E24D8D23D1B2ED00BD5641 /* ComponentCycleRecordView.swift */,
+				A5E24D9123D1BA8400BD5641 /* ComponentNumberRecordView.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -301,6 +317,7 @@
 		A59351DA23CD69790075E8E1 /* Friend */ = {
 			isa = PBXGroup;
 			children = (
+				A5E24D8423D1B15A00BD5641 /* Componentes */,
 				A59351DD23CD6C290075E8E1 /* Models */,
 				A59351DC23CD6C230075E8E1 /* Views */,
 				A59351DB23CD6C0B0075E8E1 /* ViewContollers */,
@@ -319,6 +336,7 @@
 		A59351DC23CD6C230075E8E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A5E24D8223D1A84500BD5641 /* SPFriendRecordingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,6 +393,33 @@
 				A598566F23CC450200DEF8A7 /* ColorManager.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		A5E24D8423D1B15A00BD5641 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				A5E24D8523D1B1D100BD5641 /* FriendComponentsFactory.swift */,
+				A5E24D8823D1B21C00BD5641 /* Rows */,
+				A5E24D8723D1B21600BD5641 /* Sections */,
+			);
+			path = Componentes;
+			sourceTree = "<group>";
+		};
+		A5E24D8723D1B21600BD5641 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				A5E24D8923D1B24000BD5641 /* SPFriendSectionOne.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		A5E24D8823D1B21C00BD5641 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				A5E24D8B23D1B29800BD5641 /* SPFriendCycleCellComponent.swift */,
+				A5E24D8F23D1BA3200BD5641 /* SPFriendRecordCellComponent.swift */,
+			);
+			path = Rows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,15 +546,20 @@
 				A583AA9423CC8EFE00073379 /* ComponsentTitleIndicatorView.swift in Sources */,
 				A583AA8823CC799F00073379 /* ComponseProtocol.swift in Sources */,
 				A598565B23CC446D00DEF8A7 /* AppDelegate.swift in Sources */,
+				A5E24D8323D1A84500BD5641 /* SPFriendRecordingView.swift in Sources */,
 				A583AA7323CC674300073379 /* SPMineViewController.swift in Sources */,
+				A5E24D8A23D1B24000BD5641 /* SPFriendSectionOne.swift in Sources */,
 				A583AAA823CCA45B00073379 /* Global.swift in Sources */,
 				A583AA7E23CC732700073379 /* SPStoreViewController.swift in Sources */,
 				A583AA6D23CC58E500073379 /* SPTabBarViewController.swift in Sources */,
 				A583AA6F23CC594800073379 /* SPNavigationViewController.swift in Sources */,
+				A5E24D9223D1BA8400BD5641 /* ComponentNumberRecordView.swift in Sources */,
 				A583AAA323CCA1FB00073379 /* ComponentsMarginComponse.swift in Sources */,
+				A5E24D8623D1B1D100BD5641 /* FriendComponentsFactory.swift in Sources */,
 				A583AA9623CC95CE00073379 /* ComponsentLandscapeCollectionView.swift in Sources */,
 				A598567023CC450200DEF8A7 /* ColorManager.swift in Sources */,
 				A583AA9023CC7BFD00073379 /* ComponsentBannerView.swift in Sources */,
+				A5E24D8C23D1B29800BD5641 /* SPFriendCycleCellComponent.swift in Sources */,
 				A59351D723CD604E0075E8E1 /* ComponsentShowImageListTableView.swift in Sources */,
 				A583AA9223CC8C8100073379 /* SPStoreSectionOne.swift in Sources */,
 				A59351E123CD88410075E8E1 /* Event.swift in Sources */,
@@ -518,7 +568,9 @@
 				A583AA7723CC67C400073379 /* SPMineTableViewCell.swift in Sources */,
 				A583AAA123CCA0BB00073379 /* SPStoreSectionThree.swift in Sources */,
 				A583AAA523CCA23B00073379 /* ComponsentMarginView.swift in Sources */,
+				A5E24D8E23D1B2ED00BD5641 /* ComponentCycleRecordView.swift in Sources */,
 				A583AA9F23CC9AE900073379 /* SPStoreTitleIndicatorComponent.swift in Sources */,
+				A5E24D9023D1BA3200BD5641 /* SPFriendRecordCellComponent.swift in Sources */,
 				A583AA8323CC792100073379 /* StoreComponsent.swift in Sources */,
 				A59351DF23CD6C400075E8E1 /* SPFriendViewController.swift in Sources */,
 				A583AA9D23CC9AAC00073379 /* SPStoreRecommendComponent.swift in Sources */,
