@@ -13,6 +13,7 @@ class SPStoreViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("first")
         makeInitConfig()
     }
     
@@ -36,7 +37,7 @@ class SPStoreViewController: UITableViewController {
 extension SPStoreViewController: EventDelegate {
     
     func onEvent(_ obj: EventObj) {
-        print("---- this is mian viewContoller")
-        print(obj.params as Any)
+        let vc = SPMineSportRecordViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

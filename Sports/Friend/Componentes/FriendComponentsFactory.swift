@@ -20,7 +20,7 @@ class FriendComponentsFactory {
         let sectionOne = SPFriendSectionOne()
         
         let sectionOneRowOne = SPFriendCycleCellComponent()
-        let sectionOneMargin = ComponentsMarginComponse.init(height: 15, bg: UIColor.color_353331)
+        let sectionOneMargin = ComponentsMarginComponse.init(height: 20, bg: UIColor.color_353331)
         let sectionOneRowTwo = SPFriendRecordCellComponent()
         let sectionOneRowThree = SPFriendStaisticsCellComponent()
         sectionOne.addComponents([sectionOneRowOne, sectionOneMargin, sectionOneRowTwo, sectionOneMargin, sectionOneRowThree, sectionOneMargin])

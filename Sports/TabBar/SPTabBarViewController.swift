@@ -14,7 +14,7 @@ class SPTabBarViewController: UITabBarController {
         super.viewDidLoad()
         makeSettingUI()
         viewControllers = makeViewControllers()
-        selectedIndex = 1
+        selectedIndex = 0
     }
 
     private func makeSettingUI() {
@@ -61,7 +61,7 @@ class SPTabBarViewController: UITabBarController {
     }
     
     private func makeViewControllers() -> [SPNavigationViewController] {
-        let homeVc = UIViewController()
+        let homeVc = SPHomeViewController()
         homeVc.navigationItem.title = "首页"
         let homeNav = makeChildNavigation(homeVc)
         homeNav.tabBarItem.title = ""

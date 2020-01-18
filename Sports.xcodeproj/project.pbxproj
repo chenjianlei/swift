@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A52B135F23D2A2E5007B344A /* BaseWMPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B135E23D2A2E5007B344A /* BaseWMPageViewController.swift */; };
+		A52B136123D2A3A5007B344A /* SPSortWMPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B136023D2A3A5007B344A /* SPSortWMPageViewController.swift */; };
+		A52B136723D2CEEB007B344A /* SPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B136623D2CEEB007B344A /* SPHomeViewController.swift */; };
+		A52B136923D2F57D007B344A /* SPMineSportRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B136823D2F57D007B344A /* SPMineSportRecordViewController.swift */; };
+		A52B136B23D3003E007B344A /* GlobalNavigatioBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B136A23D3003E007B344A /* GlobalNavigatioBar.swift */; };
 		A548061C23D053D400B66BDE /* SPMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A548061B23D053D400B66BDE /* SPMineHeaderView.swift */; };
 		A583AA6A23CC585600073379 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583AA6923CC585600073379 /* AlertManager.swift */; };
 		A583AA6D23CC58E500073379 /* SPTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583AA6C23CC58E500073379 /* SPTabBarViewController.swift */; };
@@ -57,6 +62,11 @@
 		10A1203AFDCEF3629673A836 /* Pods-Sports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sports.release.xcconfig"; path = "Target Support Files/Pods-Sports/Pods-Sports.release.xcconfig"; sourceTree = "<group>"; };
 		44ED55E43B2329E69218591C /* Pods_Sports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		644F8FF086C26979D6C90BD0 /* Pods-Sports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sports.debug.xcconfig"; path = "Target Support Files/Pods-Sports/Pods-Sports.debug.xcconfig"; sourceTree = "<group>"; };
+		A52B135E23D2A2E5007B344A /* BaseWMPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWMPageViewController.swift; sourceTree = "<group>"; };
+		A52B136023D2A3A5007B344A /* SPSortWMPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPSortWMPageViewController.swift; sourceTree = "<group>"; };
+		A52B136623D2CEEB007B344A /* SPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPHomeViewController.swift; sourceTree = "<group>"; };
+		A52B136823D2F57D007B344A /* SPMineSportRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMineSportRecordViewController.swift; sourceTree = "<group>"; };
+		A52B136A23D3003E007B344A /* GlobalNavigatioBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalNavigatioBar.swift; sourceTree = "<group>"; };
 		A548061B23D053D400B66BDE /* SPMineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMineHeaderView.swift; sourceTree = "<group>"; };
 		A583AA6923CC585600073379 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		A583AA6C23CC58E500073379 /* SPTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTabBarViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +144,70 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A52B135A23D2A0DD007B344A /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				A52B135D23D2A0F5007B344A /* Models */,
+				A52B135C23D2A0EF007B344A /* Views */,
+				A52B135B23D2A0E6007B344A /* ViewControllers */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		A52B135B23D2A0E6007B344A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A52B136023D2A3A5007B344A /* SPSortWMPageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A52B135C23D2A0EF007B344A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A52B135D23D2A0F5007B344A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A52B136223D2CEBB007B344A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A52B136523D2CED0007B344A /* Models */,
+				A52B136423D2CECB007B344A /* Views */,
+				A52B136323D2CEC3007B344A /* ViewControllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A52B136323D2CEC3007B344A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A52B136623D2CEEB007B344A /* SPHomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A52B136423D2CECB007B344A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A52B136523D2CED0007B344A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A583AA6823CC584000073379 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				A583AA7223CC674300073379 /* SPMineViewController.swift */,
+				A52B136823D2F57D007B344A /* SPMineSportRecordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +382,7 @@
 		A592CC8A23CF15E60086B497 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A52B136A23D3003E007B344A /* GlobalNavigatioBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				A592CC8C23CF16020086B497 /* BaseViewController.swift */,
+				A52B135E23D2A2E5007B344A /* BaseWMPageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -376,6 +453,8 @@
 			children = (
 				A598565A23CC446D00DEF8A7 /* AppDelegate.swift */,
 				A583AAA623CCA28500073379 /* Header.h */,
+				A52B136223D2CEBB007B344A /* Home */,
+				A52B135A23D2A0DD007B344A /* Sort */,
 				A59351DA23CD69790075E8E1 /* Friend */,
 				A583AA7F23CC732B00073379 /* Componse */,
 				A583AA7C23CC730C00073379 /* Store */,
@@ -547,17 +626,20 @@
 				A583AA7B23CC6CAA00073379 /* ConfigCell.swift in Sources */,
 				A583AA8E23CC7AD900073379 /* SPStoreBannerComponent.swift in Sources */,
 				A59351D923CD60D60075E8E1 /* SPStoreShowImageComponent.swift in Sources */,
+				A52B136723D2CEEB007B344A /* SPHomeViewController.swift in Sources */,
 				A583AA9B23CC999500073379 /* SPStoreSectionTwo.swift in Sources */,
 				A592CC8D23CF16020086B497 /* BaseViewController.swift in Sources */,
 				A583AA9423CC8EFE00073379 /* ComponsentTitleIndicatorView.swift in Sources */,
 				A583AA8823CC799F00073379 /* ComponseProtocol.swift in Sources */,
 				A598565B23CC446D00DEF8A7 /* AppDelegate.swift in Sources */,
+				A52B136923D2F57D007B344A /* SPMineSportRecordViewController.swift in Sources */,
 				A5E24D8323D1A84500BD5641 /* SPFriendRecordingView.swift in Sources */,
 				A583AA7323CC674300073379 /* SPMineViewController.swift in Sources */,
 				A5E24D8A23D1B24000BD5641 /* SPFriendSectionOne.swift in Sources */,
 				A583AAA823CCA45B00073379 /* Global.swift in Sources */,
 				A583AA7E23CC732700073379 /* SPStoreViewController.swift in Sources */,
 				A583AA6D23CC58E500073379 /* SPTabBarViewController.swift in Sources */,
+				A52B136B23D3003E007B344A /* GlobalNavigatioBar.swift in Sources */,
 				A583AA6F23CC594800073379 /* SPNavigationViewController.swift in Sources */,
 				A5E24D9223D1BA8400BD5641 /* ComponentNumberRecordView.swift in Sources */,
 				A583AAA323CCA1FB00073379 /* ComponentsMarginComponse.swift in Sources */,
@@ -579,8 +661,10 @@
 				A5E24D8E23D1B2ED00BD5641 /* ComponentCycleRecordView.swift in Sources */,
 				A583AA9F23CC9AE900073379 /* SPStoreTitleIndicatorComponent.swift in Sources */,
 				A5E24D9023D1BA3200BD5641 /* SPFriendRecordCellComponent.swift in Sources */,
+				A52B136123D2A3A5007B344A /* SPSortWMPageViewController.swift in Sources */,
 				A583AA8323CC792100073379 /* StoreComponsent.swift in Sources */,
 				A59351DF23CD6C400075E8E1 /* SPFriendViewController.swift in Sources */,
+				A52B135F23D2A2E5007B344A /* BaseWMPageViewController.swift in Sources */,
 				A583AA9D23CC9AAC00073379 /* SPStoreRecommendComponent.swift in Sources */,
 				A583AAAA23CCA6EC00073379 /* SPStoreSectionFour.swift in Sources */,
 			);

@@ -10,7 +10,9 @@
 #define Header_h
 
 #import <M80TableViewComponent/M80TableViewComponent.h>
-#import <GKNavigationBarViewController/GKNavigationBarViewController.h>
+//#import <GKNavigationBarViewController/GKNavigationBarViewController.h>
+#import <WMPageController/WMPageController.h>
+#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
 
 
 #endif /* Header_h */

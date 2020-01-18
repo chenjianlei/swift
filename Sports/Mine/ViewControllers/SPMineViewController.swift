@@ -12,25 +12,33 @@ import SnapKit
 let rote = CGFloat(375.0 / 169.0)
 let bgHeight = global_screen_width / rote
 
-class SPMineViewController: BaseViewController {
+class SPMineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .color_F6F6F6
         makeIntiSettingConfig()
         makeInitSubviews()
-        print("global_navigation_height -- \(global_navigation_height)")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     private func makeIntiSettingConfig() {
-        gk_navBarAlpha = 0
-        gk_navTitleView = titleView
-        gk_navLineHidden = true
+        fd_prefersNavigationBarHidden = true
     }
     
     private func makeInitSubviews() {
+        
         view.addSubview(tableView)
         tableView.addSubview(headerView)
+        view.addSubview(navigationView)
         makeInitLayout()
     }
     
@@ -57,8 +65,7 @@ class SPMineViewController: BaseViewController {
             headerView.frame = rect
         }
         
-        gk_navBarAlpha = CGFloat(alpha)
-        titleView.alpha = CGFloat(alpha)
+        navigationView.alpha = CGFloat(alpha)
     }
     
     lazy var tableView: UITableView = {
@@ -79,17 +86,6 @@ class SPMineViewController: BaseViewController {
         return i
     }()
     
-    lazy var titleView: UILabel = {
-        let t = UILabel.init(frame: CGRect.zero)
-        t.textColor = .color_FFFFFF
-        t.font = .systemFont(ofSize: 18)
-        t.text = "this is name!"
-        t.sizeToFit()
-        t.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
-        t.alpha = 0
-        return t
-    }()
-    
     lazy var arrays: [ConfigCell] = {
         let arrs = [
             ConfigCell.init(icon: "mine_sport_record", title: "运动记录", accessoryType: .disclosureIndicator),
@@ -101,16 +97,32 @@ class SPMineViewController: BaseViewController {
         ]
         return arrs
     }()
+    
+    lazy var navigationView: GlobalNavigatioBar = {
+        let n = GlobalNavigatioBar.init("this is title")
+        n.alpha = 0
+        n.backgroundColor = .color_353331
+        return n
+    }()
 }
 
 extension SPMineViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = BaseViewController()
-        vc.view.backgroundColor = .color_353331
-        vc.gk_navTitle = "tes"
-        navigationController?.pushViewController(vc, animated: true)
+        var vc: UIViewController?
+        if indexPath.row == 0 {
+            vc = SPMineSportRecordViewController()
+//            let nav = UINavigationController.init(rootViewController: vc!)
+//            navigationController?.pushViewController(nav, animated: true)
+//            return
+        }
+        
+        
+        guard let controller = vc else {
+            return
+        }
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

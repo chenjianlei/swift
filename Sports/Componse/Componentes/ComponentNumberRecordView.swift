@@ -14,8 +14,6 @@ class ComponentNumberRecordView: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         backgroundColor = .color_353331
-        contentView.layer.cornerRadius = 16.0
-        contentView.layer.masksToBounds = true
         makeInitSubviews()
         makeInitLayout()
     }
@@ -25,12 +23,13 @@ class ComponentNumberRecordView: UITableViewCell {
     }
     
     private func makeInitSubviews() {
-        contentView.addSubview(recordKaView)
-        contentView.addSubview(recordBuView)
+        contentView.addSubview(bgView)
+        bgView.addSubview(recordKaView)
+        bgView.addSubview(recordBuView)
     }
     
     private func makeInitLayout() {
-        contentView.snp.makeConstraints { (make) in
+        bgView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15)
             make.right.equalToSuperview().offset(-15)
             make.height.equalToSuperview()
@@ -57,5 +56,13 @@ class ComponentNumberRecordView: UITableViewCell {
         let rec = SPFriendRecordingView.init(des: "步数", icon: "")
         rec.backgroundColor = .color_35373B
         return rec
+    }()
+    
+    lazy var bgView: UIView = {
+        let v = UIView()
+        v.backgroundColor = .color_353331
+        v.layer.cornerRadius = 16.0
+        v.layer.masksToBounds = true
+        return v
     }()
 }

@@ -12,9 +12,11 @@ target 'Sports' do
   pod 'M80TableViewComponent'
   pod 'HGCircularSlider'
   pod 'RxSwift'
-  pod 'GKNavigationBarViewController'
+#  pod 'GKNavigationBarViewController'
   pod 'Charts'
   pod 'ChartsRealm'
+  pod 'WMPageController'
+  pod 'FDFullscreenPopGesture'
 #  pod 'UICircularProgressRing'
 #  pod 'KDCircularProgress'
   # Pods for Sports

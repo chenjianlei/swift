@@ -77,4 +77,8 @@ extension UIColor {
     static var color_5A5D65: UIColor {
           return ColorManager.share.make("5A5D65")
     }
+    
+    static var color_707070: UIColor {
+          return ColorManager.share.make("707070")
+    }
 }
